@@ -3,7 +3,7 @@
 
 .contact {
     width: 100%;
-    height: 80vh;
+    // height: 70vh;
     @include mixins.colors(c.$grey-bg-color, c.$main-text-color);
     h2 {
         @include mixins.sub-headings;
@@ -29,7 +29,7 @@
         }
         a {
             @include mixins.button;
-            margin: 50px 50px;
+            margin: 50px;
             font-size: 1.3rem;
         }
     }

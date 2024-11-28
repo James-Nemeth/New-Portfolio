@@ -4,15 +4,15 @@
 
 .about {
     width: 100%;
-    height: 140vh;
+    // height: 140vh;
     @include mixins.colors(c.$white-bg-color, c.$alt-text-color);
     h2 {
         @include mixins.sub-headings;
     }
     &__container {
-        @include mixins.flex();
+        @include mixins.flex;
         text-align: center;
-        width: 50%;
+        width: 60%;
         height: 50vh;
         margin: auto;
     }
@@ -27,8 +27,8 @@
 
     &__text {
         width: 70%;
-        margin: auto;
         @include mixins.flex;
+        margin: auto;
         div {
             @include mixins.about-card;
             img {

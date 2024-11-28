@@ -1,0 +1,17 @@
+@use "../particals/colors" as c;
+@use "../particals/mixins";
+
+.footer {
+    width: 100%;
+    height: 10vh;
+    @include mixins.colors(c.$white-bg-color, c.$alt-text-color);
+    @include mixins.flex(row, space-around);
+    font-size: 1.1rem;
+    nav {
+        a {
+            color: c.$alt-text-color;
+            text-decoration: none;
+            padding: 0px 30px;
+        }
+    }
+}
