@@ -81,7 +81,7 @@ body {
             &__heading {
                 a {
                     @include mixins.button;
-                    margin: 0;
+                    margin: 10px;
                 }
             }
         }
@@ -148,7 +148,7 @@ body {
             &__heading {
                 a {
                     @include mixins.button;
-                    margin: 0;
+                    margin: 10px;
                 }
             }
         }
@@ -240,7 +240,7 @@ body {
             &__heading {
                 a {
                     @include mixins.button;
-                    margin: 0;
+                    margin: 10px;
                 }
             }
         }

@@ -47,6 +47,7 @@
 
 .about {
   width: 100%;
+  padding-bottom: 70px;
   background-color: #ffffff;
   color: #000000;
 }
@@ -227,9 +228,14 @@
   font-size: 1.2rem;
   padding: 10px 5px;
 }
+.projects__card__heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .projects__card__heading h3 {
-  margin: 20px;
-  margin-bottom: 50px;
+  margin: 10px;
   font-size: 1.4rem;
   text-decoration: underline;
 }
@@ -240,7 +246,7 @@
   color: #ffffff;
   font-size: 1.1rem;
   border-radius: 10px;
-  margin: 0px 25px;
+  margin: 10px;
 }
 
 .contact {
@@ -409,7 +415,7 @@ body {
     color: #ffffff;
     font-size: 1.1rem;
     border-radius: 10px;
-    margin: 0;
+    margin: 10px;
   }
   .contact h2 {
     justify-content: center;
@@ -494,7 +500,7 @@ body {
     color: #ffffff;
     font-size: 1.1rem;
     border-radius: 10px;
-    margin: 0;
+    margin: 10px;
   }
   .contact h2 {
     justify-content: center;
@@ -623,7 +629,7 @@ body {
     color: #ffffff;
     font-size: 1.1rem;
     border-radius: 10px;
-    margin: 0;
+    margin: 10px;
   }
   .contact h2 {
     justify-content: center;
