@@ -1,0 +1,24 @@
+@use "../particals/colors" as c;
+@use "../particals/mixins";
+
+.skills {
+    width: 100%;
+    height: 100vh;
+    @include mixins.colors(c.$grey-bg-color, c.$main-text-color);
+    h2 {
+        @include mixins.sub-headings;
+        padding-bottom: 100px;
+    }
+    &__container {
+        font-size: 1rem;
+        flex-wrap: wrap;
+        @include mixins.flex(row, space-evenly);
+        div {
+            @include mixins.skills-card
+        }
+        img {
+            height: 90px;
+            width: 90px;
+        }
+    }
+}

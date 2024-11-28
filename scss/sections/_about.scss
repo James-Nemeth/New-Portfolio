@@ -1,0 +1,49 @@
+@use "../particals/colors" as c;
+@use "../particals/mixins";
+
+
+.about {
+    width: 100%;
+    height: 140vh;
+    @include mixins.colors(c.$white-bg-color, c.$alt-text-color);
+    h2 {
+        @include mixins.sub-headings;
+    }
+    &__container {
+        @include mixins.flex();
+        text-align: center;
+        width: 50%;
+        height: 50vh;
+        margin: auto;
+    }
+    &__experience{
+        @include mixins.about-card;
+        font-size: 1.4rem;
+    }
+    &__education{
+        @include mixins.about-card;
+        font-size: 1.2rem
+    }
+
+    &__text {
+        width: 70%;
+        margin: auto;
+        @include mixins.flex;
+        div {
+            @include mixins.about-card;
+            img {
+                height: 350px;
+                width: 350px;
+                border-radius: 30px;
+                margin: auto;
+                border: 2px solid c.$blue-primary;
+            }
+            p {
+                font-size: 1.2rem;
+                padding: 0px 20px;
+                text-align: center;
+            }
+        }
+        
+    }
+}

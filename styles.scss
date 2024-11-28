@@ -1,0 +1,19 @@
+@use "./scss/sections/nav";
+@use "./scss/sections/hero";
+@use "./scss/sections/about";
+@use "./scss/sections/skills";
+@use "./scss/particals/colors" as c;
+@use "./scss/particals/typography" as font;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: font.$main-text-font;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: c.$black-bg-color;
+}
