@@ -1,0 +1,45 @@
+@use "../particals/colors" as c;
+@use "../particals/mixins";
+
+.projects {
+    width: 100%;
+    height: 135vh;
+    @include mixins.colors(c.$white-bg-color, c.$alt-text-color);
+    h2 {
+        @include mixins.sub-headings;
+        padding-bottom: 100px;
+    }
+    &__container {
+        font-size: 1rem;
+        flex-wrap: wrap;
+        @include mixins.flex(row, space-evenly);
+    }
+    &__card {
+        @include mixins.project-card;
+        &__details {
+            @include mixins.flex(column);
+            width: 100%;
+            img {
+                height: 200px;
+                width: 400px;
+
+            }
+            p {
+                font-size: 1.2rem;
+                padding: 10px 5px;
+            }
+        }
+        &__heading {
+            h3 {
+                margin: 20px;
+                margin-bottom: 50px;
+                font-size: 1.4rem;
+                text-decoration: underline;
+            }
+            a {
+                @include mixins.button;
+                margin: 0px 25px;
+            }
+        }
+    }
+}

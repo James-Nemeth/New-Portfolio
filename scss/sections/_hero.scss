@@ -12,16 +12,8 @@
     gap: 50px;
     @include mixins.colors(c.$grey-bg-color, c.$main-text-color);
     h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
         font-style: italic;
         text-decoration: underline;
     }
-
-    // a {
-    //     text-decoration: none;
-    //     padding: 10px 30px;
-    //     @include mixins.colors(c.$blue-primary, c.$main-text-color);
-    //     font-size: 1.1rem;
-    //     border-radius: 10px;
-    // }
 }
