@@ -157,6 +157,10 @@ body {
         h2 {
             @include mixins.sub-headings-mobile;
         }
+        &__links {
+            flex-direction: column;
+            gap: 25px;
+        }
     }
     .footer {
         text-align: center;
@@ -167,12 +171,13 @@ body {
     .hero {
         height: 120vh;
         h1 {
-            font-size: 2.7rem
+            font-size: 2.4rem
         }
     }
     .about {
         h2 {
-            @include mixins.sub-headings-mobile;
+            font-size: 1.4rem;
+            padding: 60px
         }
         &__container {
             @include mixins.flex(column);
@@ -210,8 +215,8 @@ body {
     }
     .skills {
         h2 {
-            @include mixins.sub-headings-mobile;
-        } 
+            font-size: 1.4rem;
+        }
         &__container {
             margin-bottom: 10px;
             div {
@@ -225,12 +230,13 @@ body {
         }
     }
     .projects {
+        h2 {
+            font-size: 1.4rem;
+            padding: 60px;
+        }
         img {
             width: 250px;
             height: 150px
-        }
-        h2 {
-            @include mixins.sub-headings-mobile;
         }
         &__container {
             @include mixins.flex(column);
@@ -247,7 +253,8 @@ body {
     }
     .contact {
         h2 {
-            @include mixins.sub-headings-mobile;
+            font-size: 1.3rem;
+            padding: 40px;
         }
         &__links {
             flex-direction: column;

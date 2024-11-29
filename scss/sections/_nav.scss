@@ -3,6 +3,7 @@
 
 .nav {
     position: fixed;
+    z-index: 2;
     @include mixins.flex(row, space-between);
     padding: 40px 30px;
     width: 100%;

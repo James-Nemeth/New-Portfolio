@@ -13,6 +13,7 @@
         @include mixins.flex(row, space-evenly);
         div {
             @include mixins.skills-card;
+            @include mixins.box-shadow;
         }
         img {
             height: 90px;

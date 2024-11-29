@@ -11,7 +11,13 @@
         a {
             color: c.$alt-text-color;
             text-decoration: none;
-            padding: 0px 30px;
+            border-radius: 10px;
+            padding: 0px 10px;
+            margin: 0px 20px;
+            &:hover {
+                transition: 0.3s;
+                box-shadow: 0px 0px 5px 2px c.$blue-primary;
+            }
         }
     }
 }

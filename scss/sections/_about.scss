@@ -3,10 +3,12 @@
 
 
 .about {
+    box-shadow: 0px 20px 15px -10px c.$blue-primary inset;
     width: 100%;
     padding-bottom: 70px;
     @include mixins.colors(c.$white-bg-color, c.$alt-text-color);
     h2 {
+        display: flex;
         @include mixins.sub-headings;
     }
     &__container {
@@ -18,10 +20,12 @@
     }
     &__experience{
         @include mixins.about-card;
+        @include mixins.box-shadow;
         font-size: 1.4rem;
     }
     &__education{
         @include mixins.about-card;
+        @include mixins.box-shadow;
         font-size: 1.2rem
     }
 
@@ -31,17 +35,17 @@
         margin: auto;
         div {
             @include mixins.about-card;
+            @include mixins.box-shadow;
             img {
-                height: 350px;
-                width: 350px;
+                height: 400px;
+                width: 400px;
                 border-radius: 30px;
                 margin: auto;
-                border: 2px solid c.$blue-primary;
+                @include mixins.box-shadow;
             }
             p {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
                 padding: 0px 20px;
-                text-align: center;
             }
         }
         
