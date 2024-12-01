@@ -18,9 +18,16 @@
     }
     &__desktop {
         display: flex;
+        justify-content: end;
         gap: 30px;
         a {
             @include mixins.nav-text;
         }
     }
+    &__hamburger {
+        display: none;
+        
+    }
+    
+    
 }

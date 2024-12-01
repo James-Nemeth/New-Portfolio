@@ -29,9 +29,7 @@ body {
         }
     }
     .about {
-        h2 {
-            @include mixins.sub-headings-mobile;
-        }
+
         &__container {
             @include mixins.flex(column);
             text-align: center;
@@ -40,12 +38,14 @@ body {
             margin: auto;
         }
         &__experience{
+            @include mixins.about-card;
+            padding: 10px;
             font-size: 1.4rem;
-            padding: 0px
         }
         &__education{
             @include mixins.about-card;
-            font-size: 1.4rem
+            font-size: 1.4rem;
+            padding: 10px;
         }
 
         &__text {
@@ -53,7 +53,7 @@ body {
             display: flex;
             flex-direction: column;
             div {
-                width: 80%;
+                margin-top: 20px;
                 img {
                     height: 250px;
                     width: 250px;
@@ -94,9 +94,19 @@ body {
 }
 
 @include mixins.tablet {
-    .hero {
-        h1 {
-            font-size: 2.7rem
+    .nav {
+        &__desktop {
+            display: none;
+        }
+        &__hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+                span {
+                background-color: white;
+                padding: 1px 10px;
+                margin-top: 4px;
+            }
         }
     }
     .about {
@@ -168,44 +178,26 @@ body {
 }
 
 @include mixins.mobile {
-    .hero {
-        height: 120vh;
-        h1 {
-            font-size: 2.4rem
-        }
-    }
     .about {
         h2 {
             font-size: 1.4rem;
             padding: 60px
         }
         &__container {
-            @include mixins.flex(column);
-            text-align: center;
             width: 100%;
-            height: 70vh;
-            margin: auto;
         }
         &__experience{
-            @include mixins.about-card;
             width: 60%;
-            font-size: 1.1rem;
-            padding: 0px
         }
         &__education{
-            @include mixins.about-card;
             width: 60%;
             font-size: 1.1rem;
             padding: 0px;
         }
-
         &__text {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
             div {
                 width: 80%;
-                padding: 10px;
+                padding: 20px;
                 img {
                     height: 250px;
                     width: 250px;
@@ -238,27 +230,11 @@ body {
             width: 250px;
             height: 150px
         }
-        &__container {
-            @include mixins.flex(column);
-        }
-        &__card {
-            width: 80%;
-            &__heading {
-                a {
-                    @include mixins.button;
-                    margin: 10px;
-                }
-            }
-        }
     }
     .contact {
         h2 {
             font-size: 1.3rem;
             padding: 40px;
-        }
-        &__links {
-            flex-direction: column;
-            gap: 25px;
         }
     }
     .footer {
@@ -291,4 +267,6 @@ body {
         }
     }
 }
+
+
 
