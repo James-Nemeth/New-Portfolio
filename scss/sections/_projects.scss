@@ -7,6 +7,7 @@
     @include mixins.colors(c.$white-bg-color, c.$alt-text-color);
     h2 {
         @include mixins.sub-headings;
+        @include mixins.line-animation;
         padding-bottom: 50px;
     }
     &__container {

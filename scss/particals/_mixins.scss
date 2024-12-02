@@ -19,6 +19,35 @@
     }
 }
 
+@mixin line-animation {
+    .line__container {
+        display: inline-flex; 
+        gap: 10px; 
+        .line {
+            display: inline-block;
+            animation: bounce 1.2s infinite ease-in-out;
+        }
+        #line-one {
+            margin-left: 10px;
+            animation-delay: 0s;
+        }
+        #line-two {
+            animation-delay: 0.2s;
+        }
+        #line-three {
+            animation-delay: 0.4s;
+        }
+    }
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0); 
+        }
+        50% {
+            transform: translateY(-10px); 
+        }
+    }
+}
+
 @mixin nav-text {
     font-size: 1.3rem; 
     color: c.$main-text-color;

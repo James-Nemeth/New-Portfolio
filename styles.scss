@@ -64,15 +64,7 @@ body {
             }
         }
     }
-    .skills {
-        h2 {
-            @include mixins.sub-headings-mobile;
-        }
-    }
     .projects {
-        h2 {
-            @include mixins.sub-headings-mobile;
-        }
         &__container {
             @include mixins.flex(column);
         }
@@ -84,11 +76,6 @@ body {
                     margin: 10px;
                 }
             }
-        }
-    }
-    .contact {
-        h2 {
-            @include mixins.sub-headings-mobile;
         }
     }
 }

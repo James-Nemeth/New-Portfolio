@@ -7,6 +7,7 @@
     @include mixins.colors(c.$grey-bg-color, c.$main-text-color);
     h2 {
         @include mixins.sub-headings;
+        @include mixins.line-animation;
     }
     &__container {
         flex-wrap: wrap;

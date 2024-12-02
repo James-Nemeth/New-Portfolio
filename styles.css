@@ -56,14 +56,6 @@
   text-decoration: underline;
 }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
 .about {
   box-shadow: 0px 20px 15px -10px #3c83ff inset;
   width: 100%;
@@ -81,11 +73,29 @@
 }
 .about h2 .line__container {
   display: inline-flex;
-  gap: 4px;
+  gap: 10px;
 }
 .about h2 .line__container .line {
   display: inline-block;
   animation: bounce 1.2s infinite ease-in-out;
+}
+.about h2 .line__container #line-one {
+  margin-left: 10px;
+  animation-delay: 0s;
+}
+.about h2 .line__container #line-two {
+  animation-delay: 0.2s;
+}
+.about h2 .line__container #line-three {
+  animation-delay: 0.4s;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 .about__container {
   display: flex;
@@ -186,6 +196,32 @@
   justify-content: flex-start;
   font-size: 2.3rem;
 }
+.skills h2 .line__container {
+  display: inline-flex;
+  gap: 10px;
+}
+.skills h2 .line__container .line {
+  display: inline-block;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+.skills h2 .line__container #line-one {
+  margin-left: 10px;
+  animation-delay: 0s;
+}
+.skills h2 .line__container #line-two {
+  animation-delay: 0.2s;
+}
+.skills h2 .line__container #line-three {
+  animation-delay: 0.4s;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
 .skills__container {
   flex-wrap: wrap;
   display: flex;
@@ -224,6 +260,32 @@
   justify-content: flex-start;
   font-size: 2.3rem;
   padding-bottom: 50px;
+}
+.projects h2 .line__container {
+  display: inline-flex;
+  gap: 10px;
+}
+.projects h2 .line__container .line {
+  display: inline-block;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+.projects h2 .line__container #line-one {
+  margin-left: 10px;
+  animation-delay: 0s;
+}
+.projects h2 .line__container #line-two {
+  animation-delay: 0.2s;
+}
+.projects h2 .line__container #line-three {
+  animation-delay: 0.4s;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 .projects__container {
   font-size: 1rem;
@@ -296,6 +358,32 @@
   padding: 80px;
   justify-content: flex-start;
   font-size: 2.3rem;
+}
+.contact h2 .line__container {
+  display: inline-flex;
+  gap: 10px;
+}
+.contact h2 .line__container .line {
+  display: inline-block;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+.contact h2 .line__container #line-one {
+  margin-left: 10px;
+  animation-delay: 0s;
+}
+.contact h2 .line__container #line-two {
+  animation-delay: 0.2s;
+}
+.contact h2 .line__container #line-three {
+  animation-delay: 0.4s;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 .contact__links {
   display: flex;
@@ -451,16 +539,6 @@ body {
   .about__text div p {
     font-size: 1.6rem;
   }
-  .skills h2 {
-    justify-content: center;
-    text-align: center;
-    font-size: 1.6rem;
-  }
-  .projects h2 {
-    justify-content: center;
-    text-align: center;
-    font-size: 1.6rem;
-  }
   .projects__container {
     display: flex;
     flex-direction: column;
@@ -483,11 +561,6 @@ body {
     transition: 0.3s;
     transform: scale(1.1);
     box-shadow: 0px 0px 10px 7px rgba(60, 131, 225, 0.65);
-  }
-  .contact h2 {
-    justify-content: center;
-    text-align: center;
-    font-size: 1.6rem;
   }
 }
 @media screen and (max-width: 768px) {
