@@ -694,7 +694,7 @@ body {
 @media screen and (max-width: 576px) {
   .about h2 {
     font-size: 1.4rem;
-    padding: 60px;
+    padding: 60px 0px;
   }
   .about__container {
     width: 100%;
@@ -706,6 +706,7 @@ body {
     width: 60%;
     font-size: 1.1rem;
     padding: 0px;
+    margin-bottom: 20px;
   }
   .about__text div {
     width: 80%;
@@ -717,6 +718,7 @@ body {
   }
   .skills h2 {
     font-size: 1.4rem;
+    padding: 60px 0px;
   }
   .skills__container {
     margin-bottom: 10px;
@@ -731,7 +733,7 @@ body {
   }
   .projects h2 {
     font-size: 1.4rem;
-    padding: 60px;
+    padding: 60px 0px;
   }
   .projects img {
     width: 250px;
@@ -739,7 +741,7 @@ body {
   }
   .contact h2 {
     font-size: 1.3rem;
-    padding: 40px;
+    padding: 60px 0px;
   }
   .footer {
     margin: 4px;
