@@ -2,6 +2,15 @@
 @use "../particals/mixins";
 
 
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+}
+
 .about {
     box-shadow: 0px 20px 15px -10px c.$blue-primary inset;
     width: 100%;
@@ -10,6 +19,15 @@
     h2 {
         display: flex;
         @include mixins.sub-headings;
+        .line__container {
+            display: inline-flex; 
+            gap: 4px; 
+            .line {
+                display: inline-block;
+                animation: bounce 1.2s infinite ease-in-out;
+            }
+        }
+
     }
     &__container {
         @include mixins.flex;

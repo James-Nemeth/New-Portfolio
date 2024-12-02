@@ -95,8 +95,29 @@ body {
 
 @include mixins.tablet {
     .nav {
+        #navbar {
+            max-height: 0; 
+            overflow: hidden; 
+            transition: max-height 0.5s ease-out; 
+            flex-direction: column; 
+        }
+        
+        #navbar.active {
+            max-height: 300px; 
+            display: flex; 
+        }
+
         &__desktop {
-            display: none;
+            background-color: c.$blue-primary;
+            border-radius: 10px;
+            padding: 0px 25px;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: end;
+            align-items: center;
+            position: absolute;
+            top: 30px;
+            right: 50px;
         }
         &__hamburger {
             display: flex;
