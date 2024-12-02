@@ -150,6 +150,7 @@ body {
         }
     }
     .skills {
+        padding-bottom: 100px;
         h2 {
             @include mixins.sub-headings-mobile;
         }

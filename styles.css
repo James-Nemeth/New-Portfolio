@@ -185,7 +185,7 @@
 
 .skills {
   width: 100%;
-  padding-bottom: 100px;
+  padding-bottom: 180px;
   background-color: #3d4b56;
   color: #ffffff;
 }
@@ -641,6 +641,9 @@ body {
   .about__text div img {
     height: 250px;
     width: 250px;
+  }
+  .skills {
+    padding-bottom: 100px;
   }
   .skills h2 {
     justify-content: center;
