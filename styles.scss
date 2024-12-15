@@ -1,0 +1,283 @@
+@use "./scss/sections/nav";
+@use "./scss/sections/hero";
+@use "./scss/sections/about";
+@use "./scss/sections/skills";
+@use "./scss/sections/projects";
+@use "./scss/sections/contact";
+@use "./scss/sections/footer";
+@use "./scss/particals/colors" as c;
+@use "./scss/particals/typography" as font;
+@use "./scss/particals/mixins";
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: font.$main-text-font;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: c.$black-bg-color;
+}
+
+@include mixins.laptop {
+    .hero {
+        h1 {
+            font-size: 2.7rem
+        }
+    }
+    .about {
+
+        &__container {
+            @include mixins.flex(column);
+            text-align: center;
+            width: 80%;
+            height: 70vh;
+            margin: auto;
+        }
+        &__experience{
+            @include mixins.about-card;
+            padding: 10px;
+            font-size: 1.4rem;
+        }
+        &__education{
+            @include mixins.about-card;
+            font-size: 1.4rem;
+            padding: 10px;
+        }
+
+        &__text {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            div {
+                margin-top: 20px;
+                img {
+                    height: 250px;
+                    width: 250px;
+                }
+                p {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    .projects {
+        &__container {
+            @include mixins.flex(column);
+        }
+        &__card {
+            width: 80%;
+            &__heading {
+                a {
+                    @include mixins.button;
+                    margin: 10px;
+                }
+            }
+        }
+    }
+}
+
+@include mixins.tablet {
+    .nav {
+        #navbar {
+            max-height: 0; 
+            overflow: hidden; 
+            transition: max-height 0.5s ease-out; 
+            flex-direction: column; 
+        }
+        
+        #navbar.active {
+            max-height: 300px; 
+            display: flex; 
+        }
+
+        &__desktop {
+            background-color: c.$blue-primary;
+            border-radius: 10px;
+            padding: 0px 25px;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: end;
+            align-items: center;
+            position: absolute;
+            top: 30px;
+            right: 50px;
+        }
+        &__hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+                span {
+                background-color: white;
+                padding: 1px 10px;
+                margin-top: 4px;
+            }
+        }
+    }
+    .about {
+        h2 {
+            @include mixins.sub-headings-mobile;
+        }
+        &__container {
+            @include mixins.flex(column);
+            text-align: center;
+            width: 80%;
+            height: 70vh;
+            margin: auto;
+        }
+        &__experience{
+            font-size: 1.1rem;
+            padding: 0px
+        }
+        &__education{
+            @include mixins.about-card;
+            font-size: 1.1rem
+        }
+
+        &__text {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            div {
+                img {
+                    height: 250px;
+                    width: 250px;
+                }
+            }
+        }
+    }
+    .skills {
+        padding-bottom: 100px;
+        h2 {
+            @include mixins.sub-headings-mobile;
+        }
+    }
+    .projects {
+        h2 {
+            @include mixins.sub-headings-mobile;
+        }
+        &__container {
+            @include mixins.flex(column);
+        }
+        &__card {
+            width: 80%;
+            &__heading {
+                a {
+                    @include mixins.button;
+                    margin: 10px;
+                }
+            }
+        }
+    }
+    .contact {
+        h2 {
+            @include mixins.sub-headings-mobile;
+        }
+        &__links {
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+    .footer {
+        text-align: center;
+    }
+}
+
+@include mixins.mobile {
+    .about {
+        h2 {
+            font-size: 1.4rem;
+            padding: 80px 0;
+        }
+        &__container {
+            width: 100%;
+        }
+        &__experience{
+            width: 60%;
+        }
+        &__education{
+            width: 60%;
+            font-size: 1.1rem;
+            padding: 0px;
+            margin-bottom: 20px;
+        }
+        &__text {
+            div {
+                width: 80%;
+                padding: 20px;
+                img {
+                    height: 250px;
+                    width: 250px;
+                }
+            }
+        }
+    }
+    .skills {
+        h2 {
+            font-size: 1.4rem;
+            padding: 80px 0;
+        }
+        &__container {
+            margin-bottom: 10px;
+            div {
+                font-size: 1.2rem;
+                margin: 5px;
+            }
+            img {
+                height: 60px;
+                width: 60px;
+            }
+        }
+    }
+    .projects {
+        h2 {
+            font-size: 1.4rem;
+            padding: 80px 0;
+        }
+        img {
+            width: 250px;
+            height: 150px
+        }
+    }
+    .contact {
+        h2 {
+            font-size: 1.3rem;
+            padding: 80px 0;
+        }
+    }
+    .footer {
+        margin: 4px;
+        text-align: center;
+        nav {
+            text-align: center;
+            a {
+                padding: 0px 5px;
+                margin: 10px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+@include mixins.about-text {
+    .about {
+        &__text {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .projects {
+        img {
+            height: 150px;
+            width: 300px;
+        }
+    }
+}
+
+
+

@@ -1,0 +1,19 @@
+@use "../particals/colors" as c;
+@use "../particals/mixins";
+
+.hero {
+    z-index: -1;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    @include mixins.flex(column);
+    text-align: center;
+    gap: 50px;
+    @include mixins.colors(c.$grey-bg-color, c.$main-text-color);
+    h1 {
+        font-size: 3.5rem;
+        font-style: italic;
+        text-decoration: underline;
+    }
+}

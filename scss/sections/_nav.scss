@@ -1,0 +1,33 @@
+@use "../particals/colors" as c;
+@use "../particals/mixins";
+
+.nav {
+    position: fixed;
+    z-index: 2;
+    @include mixins.flex(row, space-between);
+    padding: 40px 30px;
+    width: 100%;
+    height: 8vh;
+    background-color: c.$grey-bg-color;    
+    &__img {
+        img {
+            height: 65px;
+            width: 65px;
+            border-radius: 30px;
+        }
+    }
+    &__desktop {
+        display: flex;
+        justify-content: end;
+        gap: 30px;
+        a {
+            @include mixins.nav-text;
+        }
+    }
+    &__hamburger {
+        display: none;
+        
+    }
+    
+    
+}

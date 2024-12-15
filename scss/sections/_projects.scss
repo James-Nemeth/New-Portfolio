@@ -1,0 +1,49 @@
+@use "../particals/colors" as c;
+@use "../particals/mixins";
+
+.projects {
+    z-index: 2;
+    width: 100%;
+    @include mixins.colors(c.$white-bg-color, c.$alt-text-color);
+    h2 {
+        @include mixins.sub-headings;
+        @include mixins.line-animation;
+        padding-bottom: 50px;
+    }
+    &__container {
+        font-size: 1rem;
+        flex-wrap: wrap;
+        @include mixins.flex(row, space-evenly);
+    }
+    &__card {
+        @include mixins.project-card;
+        @include mixins.box-shadow;
+        &__details {
+            @include mixins.flex(column);
+            width: 100%;
+            
+            img {
+                height: 200px;
+                width: 400px;
+
+            }
+            p {
+                display: inline;
+                font-size: 1.2rem;
+                padding: 10px 5px;
+            }
+        }
+        &__heading {
+            @include mixins.flex(column);
+            h3 {
+                margin: 10px;
+                font-size: 1.6rem;
+                text-decoration: underline;
+            }
+            a {
+                @include mixins.button;
+                margin: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@use "../particals/colors" as c;
+@use "../particals/mixins";
+
+.contact {
+    width: 100%;
+    @include mixins.colors(c.$grey-bg-color, c.$main-text-color);
+    h2 {
+        @include mixins.sub-headings;
+        @include mixins.line-animation;
+    }
+    &__links {
+        @include mixins.flex;
+        a {
+            @include mixins.button;
+            margin: 0px 50px;
+            font-size: 1.5rem;
+        }
+    }
+    &__cv {
+        text-align: center;
+        margin: 40px;
+        h3 {
+            font-size: 2rem;
+            font-style: italic;
+        }
+        h4 {
+            font-size: 1.5rem;
+            margin: 50px 0px;
+        }
+        a {
+            @include mixins.button;
+            margin: 50px;
+            font-size: 1.3rem;
+        }
+    }
+}
