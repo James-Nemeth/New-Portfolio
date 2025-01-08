@@ -310,10 +310,11 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 400px;
 }
 .projects__card__details img {
-  height: 200px;
-  width: 400px;
+  height: 300px;
+  width: 500px;
 }
 .projects__card__details p {
   display: inline;
